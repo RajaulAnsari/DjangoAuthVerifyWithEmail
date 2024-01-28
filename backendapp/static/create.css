@@ -1,0 +1,59 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px;
+}
+
+.create-account-container {
+    max-width: 300px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-account-container h2 {
+    margin-bottom: 20px;
+}
+
+.create-account-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.create-account-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.create-account-container button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.create-account-container button:hover {
+    background-color: #45a049;
+}
+
+.create-account-link {
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.create-account-link:hover {
+    text-decoration: underline;
+}

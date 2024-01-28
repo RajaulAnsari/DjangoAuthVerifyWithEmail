@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "index.css"%}">
+        <style>
+          .alert{
+              margin-bottom:-30px;
+              font-size: 13px;
+              margin-top:20px;
+          }
+          </style>
+    </head>
+    <body>
+        <div class="card-body">
+            {% comment %} <h3 class="card-title text-center">Log in to Django</h3> {% endcomment %}
+            {% if messages %}
+
+            {% for message in messages %}
+            <div class="alert alert-info">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+        <div class="login-container">
+            <h2>Login</h2>
+            <form method="POST">
+              {% csrf_token %}
+              <label for="Email">Email:</label>
+              <input type="text" id="email" name="email" required>
+        
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+        
+              <button type="submit">Login</button>
+            </form>
+        
+            <a class="create-account-link" href="{% url 'create'%}">Create a new account</a>
+          </div>        
+        
+        <script src="{% static "script.js"%}"></script>
+    </body>
+</html>
